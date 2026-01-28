@@ -1,0 +1,15 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  --color-primary: #52BDAA;
+  --color-primary-dark: #54BE96;
+  --color-secondary: #FFD5D5;
+  --color-dark-bg: #161C28;
+  --color-card-bg: #222938;
+}
+
+body {
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
