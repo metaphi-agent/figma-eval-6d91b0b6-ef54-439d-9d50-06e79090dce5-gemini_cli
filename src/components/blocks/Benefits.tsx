@@ -1,61 +1,47 @@
 import React from 'react';
-import { Container } from '../ui/Container';
 
-const benefits = [
-  "Free Consulting With Expert Saving Money",
-  "Online Banking",
-  "Investment Report Every Month",
-  "Saving Money For The Future",
-  "Online Transaction"
-];
+const Benefits = () => {
+  const benefits = [
+    "Free Consulting With Experet Saving Money",
+    "Online Banking",
+    "Investment Report Every Month",
+    "Saving Money For The Future",
+    "Online Transection"
+  ];
 
-export const Benefits: React.FC = () => {
   return (
-    <section className="py-20 bg-white overflow-hidden">
-      <Container>
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
-          {/* Content */}
-          <div className="space-y-10">
-            <h2 className="text-[50px] font-bold text-[#191A15] leading-[1.2]">
-              What Benefit Will You Get
-            </h2>
-            
-            <div className="space-y-6">
-              {benefits.map((item, index) => (
-                <div key={index} className="flex items-start gap-4 group">
-                  <div className="w-6 h-6 rounded-full bg-[#54BDAA] flex items-center justify-center flex-shrink-0 mt-1">
-                    <svg className="w-4 h-4 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
-                    </svg>
-                  </div>
-                  <span className="text-lg font-medium text-black group-hover:text-[#54BDAA] transition-colors">
-                    {item}
-                  </span>
-                </div>
-              ))}
-            </div>
-          </div>
+    <section className="py-20 px-4 md:px-20 max-w-[1440px] mx-auto w-full flex flex-col md:flex-row items-center gap-10 md:gap-20">
+      <div className="flex-1">
+        <h2 className="text-[30px] md:text-[50px] font-semibold text-text-dark leading-[1.2] mb-10 font-inter">
+          What Benifit Will You Get
+        </h2>
+        <ul className="flex flex-col gap-6">
+          {benefits.map((benefit, index) => (
+            <li key={index} className="flex items-center gap-4 text-lg text-text-dark font-medium">
+              <div className="w-6 h-6 rounded-full bg-primary flex items-center justify-center flex-shrink-0">
+                <svg width="14" height="10" viewBox="0 0 14 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M1 5L4.5 8.5L13 1" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                </svg>
+              </div>
+              {benefit}
+            </li>
+          ))}
+        </ul>
+      </div>
 
-          {/* Image */}
-          <div className="relative">
-             {/* Decorative blob behind image matching design roughly */}
-             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[80%] h-[80%] bg-[#54BDAA]/20 blur-[60px] rounded-full z-0"></div>
-             
-             <img 
-               src="./assets/images/benefits-image.png" 
-               alt="Benefits" 
-               className="relative z-10 w-full h-auto object-contain drop-shadow-2xl"
-             />
-             
-             {/* Floating cards could be added here if exported individually, 
-                 but keeping it simple with the main composition image which likely includes them 
-                 or just the main visual. The exported '0-177' is just the rectangle image. 
-                 The floating chips '0-206', '0-217' were separate. 
-                 For a prototype, the main image is sufficient or we need to construct the composition.
-             */}
-          </div>
-        </div>
-      </Container>
+      <div className="flex-1 relative">
+         <div className="absolute top-[-50px] right-[-50px] w-[100px] h-[100px] bg-primary/20 rounded-full blur-[40px] -z-10"></div>
+         <img 
+            src="./assets/images/benefit-image.png" 
+            alt="Benefits" 
+            className="w-full h-auto object-contain z-10 relative"
+            loading="lazy"
+         />
+         {/* Background elements decoration from design */}
+         <div className="absolute top-[10%] -left-[10%] w-[300px] h-[300px] bg-white rounded-full -z-20"></div>
+      </div>
     </section>
   );
 };
+
+export default Benefits;
