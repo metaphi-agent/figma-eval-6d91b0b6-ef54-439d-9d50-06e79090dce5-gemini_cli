@@ -1,0 +1,18 @@
+{
+    "colors": {
+        "primary": "#54BD95",
+        "background": {
+            "dark": "#161C28",
+            "light": "#F9F8FE",
+            "white": "#FFFFFF"
+        },
+        "text": {
+            "dark": "#191A15",
+            "grey": "#A6A6A6",
+            "white": "#FFFFFF"
+        }
+    },
+    "fonts": {
+        "primary": "Inter"
+    }
+}
